@@ -26,7 +26,7 @@ btn2.style.height = '50px'
 btn2.style.fontSize = '24px' ;
 btn2.style.width = '150px'
 let btn3 = document.createElement('button') ;
-btn3.innerText = 'Resett' ;
+btn3.innerText = 'Reset' ;
 btn3.style.width = '150px'
 btn3.style.height = '50px'
 btn3.style.fontSize = '24px' ;
@@ -34,14 +34,21 @@ btn3.style.fontSize = '24px' ;
 divChild.append(btn1,btn2,btn3) ;
 div.style.textAlign = 'center' ;
 
-btn1.addEventListener('click', function(){
-    h1.innerText = Number(h1.innerText)+1 ;
-})
+main() ;
 
-btn2.addEventListener('click', function(){
-    h1.innerText = Number(h1.innerText)-1 ;
-})
-
-btn3.addEventListener('click', function(){
-    h1.innerText = '0' ;
-})
+function main(){
+    let count = 0 ;
+    btn1.addEventListener('click', function(){
+        count = count + 1 ;
+        h1.innerText = count ;
+    })
+    
+    btn2.addEventListener('click', function(){
+        count = count - 1 ;
+        h1.innerText = count ;
+    })
+    
+    btn3.addEventListener('click', function(){
+        h1.innerText = "0" ;
+    })
+}
