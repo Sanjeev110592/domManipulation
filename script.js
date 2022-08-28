@@ -147,10 +147,14 @@ let COLORS = [
 let button = document.querySelector('.btn') ;
 let span = document.querySelector('span') ;
 
-function fun(elem){
-    span.innerText = elem ;
-    span.style.backgroundColor = elem ;
-    div.style.backgroundColor = elem ;
+function fun(colorName,events){
+    if(events.shiftKey === true){
+        span.innerText = colorName ;
+        span.style.backgroundColor = colorName ;
+        div.style.backgroundColor = colorName ;
+    }else{
+        span.innerText = "Use shift key to change color" ;
+    }
 }
 
 COLORS.forEach(function(elem){
@@ -158,7 +162,8 @@ COLORS.forEach(function(elem){
     div.setAttribute('class','box') ;
     div.style.backgroundColor = elem ;
     button.append(div) ;
-    div.addEventListener('click',function(){
-        fun(elem) ;
+    div.addEventListener('click',function(event){
+        console.log(event) ;
+        fun(elem,event) ;
     })
 })

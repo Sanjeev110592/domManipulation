@@ -1,3 +1,4 @@
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,20 +50,20 @@ table {
 
 /* Custom styles */
 
-h1{
+.head{
     font-size: 48px;
-    text-align: center;
+	display: flex;
+	justify-content: center;
 	position: relative;
 	height: 100px;
-	padding: 20px;
+	padding: 50px;
 } 
 span{
 	display: inline-block;
 	background-color: aquamarine;
-	padding: 20px 50px;
+	padding: 50px 50px;
 	position: fixed;
-	border-radius: 20%;
-	left: 41.7%;
+	border-radius: 20px;
 }
 .btn{
     display: flex;
