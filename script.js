@@ -147,14 +147,18 @@ let COLORS = [
 let button = document.querySelector('.btn') ;
 let span = document.querySelector('span') ;
 
+function fun(elem){
+    span.innerText = elem ;
+    span.style.backgroundColor = elem ;
+    div.style.backgroundColor = elem ;
+}
+
 COLORS.forEach(function(elem){
     let div = document.createElement('div') ;
     div.setAttribute('class','box') ;
     div.style.backgroundColor = elem ;
     button.append(div) ;
     div.addEventListener('click',function(){
-        span.innerText = elem ;
-        span.style.backgroundColor = elem ;
-        div.style.backgroundColor = elem ;
+        fun(elem) ;
     })
 })
